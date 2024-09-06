@@ -40,8 +40,7 @@ def evaluate_results_task1(predictions_path,ground_truth_path,verbose = 0):
                 #print(p_line,gt_line)
 
                 if (p_line != gt_line):
-                    # correct_prediction = 0
-                    correct_number_pins = 0
+                    correct_prediction = 0
                     break
 
             p.close()
@@ -123,7 +122,7 @@ def compute_percentage_tracking(gt_bboxes, predicted_bboxes, num_frames,verbose=
         print(f'tp = {tp}, tn = {tn}, fp = {fp},fn = {fn}')
     assert tn + fn + tp + fp == num_frames
     perc = (tp + tn) / (tp + fp + tn + fn)
-    
+
     return perc
 
 def evaluate_results_task2(predictions_path,ground_truth_path, verbose = 0):
@@ -167,6 +166,7 @@ def evaluate_results_task2(predictions_path,ground_truth_path, verbose = 0):
         points = total_correct_tracked_videos * 0.15
         
     return total_correct_tracked_videos,points 
+
 
 
 def evaluate_results_task3(predictions_path,ground_truth_path,verbose = 0):
@@ -218,14 +218,13 @@ def evaluate_results_task3(predictions_path,ground_truth_path,verbose = 0):
 
 
 #change this on your machine
-predictions_path_root = "F:/Master/An1/sem2/cv/Project-Computer-Vision-Bowling/results/"
-ground_truth_path_root = "F:/Master/An1/sem2/cv/Project-Computer-Vision-Bowling/data/train/Task1/ground-truth/"
+predictions_path_root = "F:/Master/An1/sem2/cv/Project-Computer-Vision-Bowling/Mihai_Popa_407/"
+ground_truth_path_root = "F:/Master/An1/sem2/cv/Project-Computer-Vision-Bowling/data/evaluation/test/ground-truth/"
 
 #task1
 verbose = 0
 predictions_path = predictions_path_root + "Task1/"
-# ground_truth_path = ground_truth_path_root + "Task1/"
-ground_truth_path = ground_truth_path_root
+ground_truth_path = ground_truth_path_root + "Task1/"
 total_correct_number_pins, points_task1 = evaluate_results_task1(predictions_path,ground_truth_path,verbose)
 
 print("Task 1 = ", points_task1)
