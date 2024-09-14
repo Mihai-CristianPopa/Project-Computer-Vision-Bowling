@@ -1,29 +1,4 @@
-
-# # Important NOTE:  Use opencv >=4.4 
-# import cv2
- 
-# # Loading the image
-# # img = cv2.imread('data/train/Task1/full-configuration-templates/lane1.jpg')
-# img = cv2.imread('data/train/Task1/01.jpg')
- 
-#  # Converting image to grayscale
-# gray= cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-# # Applying SIFT detector
-# sift = cv2.SIFT_create()
-# kp = sift.detect(gray, None)
- 
-# # Marking the keypoint on the image using circles
-# img=cv2.drawKeypoints(gray ,
-#                       kp ,
-#                       img ,
-#                       flags=cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
- 
-# cv2.imwrite('results/image-with-keypoints.jpg', img)
-
-# -------------V2
-
 import cv2
-import numpy as np
 import os
 from ultralytics import YOLO
 from ultralytics.engine.results import Results
@@ -33,10 +8,10 @@ PATH_TO_MODEL = "PinDetection.pt"
 PATH_TO_TEMPLATES = "data/train/Task1/full-configuration-templates"
 PATH_TO_TRAIN_IMAGES = "data/train/Task1"
 PATH_TO_TRAIN_GT = "data/train/Task1/ground-truth"
-PATH_TO_TRAIN_PREDICTIONS = "results/Task1/train"
+PATH_TO_TRAIN_PREDICTIONS = "results/train/Task1"
 PATH_TO_FAKE_TEST_IMAGES = "data/evaluation/fake_test/Task1"
 PATH_TO_FAKE_TEST_GT = "data/evaluation/fake_test/ground-truth/Task1"
-PATH_TO_FAKE_TEST_PREDICTIONS = "results/Task1/fake_test"
+PATH_TO_FAKE_TEST_PREDICTIONS = "results/fake_test/Task1"
 PATH_TO_TEST_IMAGES = "data/test/Task1"
 PATH_TO_TEST_GT = "data/test/ground-truth/Task1"
 PATH_TO_TEST_PREDICTIONS = "Mihai_Popa_407/Task1"
@@ -440,8 +415,8 @@ def task1(runtype: Runtype=RUNTYPE_TRAIN, display_mode: DisplayMode=None):
 
 def main():
     # return_code = task1(RUNTYPE_TRAIN, SAVE)
-    return_code = task1(RUNTYPE_FAKE_TEST, SAVE)
-    # return_code = task1(RUNTYPE_TEST, SAVE)
+    # return_code = task1(RUNTYPE_FAKE_TEST, SAVE)
+    return_code = task1(RUNTYPE_TEST, SAVE)
     if return_code == 0:
         print("Task1 completed successfully")
     elif return_code == 1:
