@@ -127,8 +127,8 @@ def compute_percentage_tracking(gt_bboxes, predicted_bboxes, num_frames,verbose=
 
 def evaluate_results_task2(predictions_path,ground_truth_path, verbose = 0):
     total_correct_tracked_videos = 0
-    #for i in range(1,16):
-    for i in range(1,2):
+    for i in range(1,16):
+    # for i in range(1,2):
 
         correct_tracked_video = 0
         
@@ -172,8 +172,8 @@ def evaluate_results_task2(predictions_path,ground_truth_path, verbose = 0):
 def evaluate_results_task3(predictions_path,ground_truth_path,verbose = 0):
     total_correct_number_pins = 0    
 
-    #for i in range(1,16):
-    for i in range(1,2):
+    for i in range(1,16):
+    # for i in range(1,2):
         correct_number_pins = 1     
         try:
             if(i<10):
@@ -181,8 +181,8 @@ def evaluate_results_task3(predictions_path,ground_truth_path,verbose = 0):
             else:
                 name = str(i)
     
-            filename_predictions = predictions_path + "/" + name + "_predicted.txt"
-            filename_ground_truth = ground_truth_path + "/" + name + ".txt"
+            filename_predictions = predictions_path + name + "_predicted.txt"
+            filename_ground_truth = ground_truth_path + name + ".txt"
          
             p = open(filename_predictions,"rt")
             gt = open(filename_ground_truth,"rt")               
@@ -219,15 +219,15 @@ def evaluate_results_task3(predictions_path,ground_truth_path,verbose = 0):
 
 #change this on your machine
 predictions_path_root = "F:/Master/An1/sem2/cv/Project-Computer-Vision-Bowling/Mihai_Popa_407/"
-ground_truth_path_root = "F:/Master/An1/sem2/cv/Project-Computer-Vision-Bowling/data/evaluation/test/ground-truth/"
+ground_truth_path_root = "F:/Master/An1/sem2/cv/Project-Computer-Vision-Bowling/data/test/ground-truth/"
 
 #task1
 verbose = 0
 predictions_path = predictions_path_root + "Task1/"
 ground_truth_path = ground_truth_path_root + "Task1/"
-total_correct_number_pins, points_task1 = evaluate_results_task1(predictions_path,ground_truth_path,verbose)
+# total_correct_number_pins, points_task1 = evaluate_results_task1(predictions_path,ground_truth_path,verbose)
 
-print("Task 1 = ", points_task1)
+# print("Task 1 = ", points_task1)
 
 
 

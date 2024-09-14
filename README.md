@@ -21,12 +21,14 @@ idna==3.7
 intel-openmp==2021.4.0
 Jinja2==3.1.4
 kiwisolver==1.4.7
+lapx==0.5.10.post1
 MarkupSafe==2.1.5
 matplotlib==3.9.2
 mkl==2021.4.0
 mpmath==1.3.0
 networkx==3.3
 numpy==1.26.4
+opencv-contrib-python==4.10.0.84
 opencv-python==4.10.0.84
 packaging==24.1
 pandas==2.2.2
@@ -61,14 +63,28 @@ urllib3==2.2.2
 To run Task 1, there is a file in the task1 folder, task1.py
 Just run that one file. Make sure that the PinDetection.pt is available too.
 
-#### Output files of Task 1
+#### Output files of Task 1. Same for Tasks 2 and 3
 Results for the train files will be available in:
-results/Task1/train
+results/train/Task1
 Results for the fake-test files will be available in:
-results/Task1/fake_test
+results/fake_test/Task1
 Results for the test files will be available in:
 Mihai_Popa_407/Task1 folder
 
 ####
 Data used for fine-tuning the PinDetection.pt model available at:
 [link text](https://universe.roboflow.com/lsc-kik8c/bowling-pin-detection)
+
+### Task 2
+
+To run Task 2, there is a file in the task2 folder, init.py
+Just run that one file. Make sure that the BowlingBallDetection.pt is available too.
+
+####
+Data used for fine-tuning the PinDetection.pt model available at:
+[link text](https://universe.roboflow.com/bsm-ecg3e/bowling-model/dataset/10)
+
+### Task 3
+
+To run Task 3, there is a file in the task3 folder, task3.py
+Just run that one file. Make sure that the PinDetection.pt is available too.
