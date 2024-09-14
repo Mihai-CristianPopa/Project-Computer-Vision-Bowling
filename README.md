@@ -200,7 +200,7 @@ The images with pin bounding boxes are put initially in three categories based o
 - **Lane Images with masked pin bounding boxes**: `save_img/Task1/<category>/lane_images/obstructed`
 - **Lane Images with unmasked pin bounding boxes**: `save_img/Task1/<category>/lane_images/unobstructed`
 - **Lane Images with not well identified bottom**: `save_img/Task1/<category>/lane_images/unbalanced`
-- **Predicted Images pin bounding boxes**: `save_images/Task1/<category>/predicted_images`s
+- **Predicted Images pin bounding boxes**: `save_images/Task1/<category>/predicted_images`
 
 ### Task 2
 - **Train Results**: `results/train/Task2`
